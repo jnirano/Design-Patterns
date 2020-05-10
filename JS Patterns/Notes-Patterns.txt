@@ -1,0 +1,68 @@
+
+//MY NOTE TAKING 
+NB:- CHECK CODES EXAMPLES IN JS DESIGN PATTERNS SUB-FOLDERS.
+
+What is DESIGN PATTERN: 
+
+
+
+Function is a first class citizen means that functions can be treated like a variable. 
+Meaning, they can be passed as arguments to other functions. It can be assigned as a 
+value to a variable or even return in a function.
+
+Callback: Is a function that is called inside of another function. Whenever you pass a function an an arguments and run it inside the function, you're doing the callback pattern. 
+
+In Js Javascript patterns are categorized into:  (1.) Creational Patterns (2.) Structural patterns (3.) Behaviora
+(1.) Creational Patterns :- This control the creation process of an object or our codes. And the pattern explored:
+   (a.) Class Design Pattern, (b.) Factory Pattern (c.) Singleton Pattern  (d.) Constructor pattern (e.) Abstract Factory Pattern Note Creational pattern is also applicable to other languages that uses the pattern.
+   
+   a. Class Design Pattern(Prototype Class Pattern):- The prototype class pattern allows us to define a blueprint for a specific type of item, and then reuse it by creating a new object from that class. NB: the constructor allow us to create a new object from the class & the constructor inside the class define the blueprint of that class. Also the purpose of the class is basically to set the blueprint for new objects that we're going to create. Class is the prototype or the blueprint for that new object created. 
+
+   b. Constructor pattern :- The constructor pattern is one step further from the class pattern, where we leverage a class created to create an extended class from it. 
+
+   c. Singleton Pattern:-  It's simply preventing our class from creating more than one instance of the blue print we've defined, i.e it allow only one instance of the class to be created
+
+   d. Factory Pattern:- This pattern is used to create a multiple classes inside an application.  The factory pattern is great when you want to create, say, a mechanism to create other objects. Good example would be a factory for creating cars.
+
+   e. Abstract Factory Pattern: Abstract factory is an extension of Factory Pattern. Where you abstract the factories pattern and are able to create multiple factories, classes et cetera. So in our car example this would be a car company overseeing multiple factories.
+
+(2.) Structural Patterns:- These are patterns used to organized or structure our codes and the pattern explored: 1. Modules Pattern, 2. Mixin Pattern, 3. Facade Pattern, 4. Flyweight Pattern and 5. Decorator Pattern . 1. MVC(Model View Controller) 2. MVP(Model View Presenter) 3. MVVM(Model View ViewModel)
+
+1. Module Pattern:- Whenever you're encapsulating a block of code into a singular function or a pure function, you're creating a module. The idea behind using modules is to organize your code in pure functions. We often use modules with the key word import or export.
+
+2. Mixing Pattern:- Mixins is way to mix functions and instances of classes after they have been created. In other words you could use mixins to add interesting functions to the car class we created earlier.
+
+3. Fcaade Pattern:- Facade is a way of hiding complexity away by creating a facade for the complex code. facade is used in react when creating component e.g </App> is facade. It is also used in other framework
+
+4. Flyweight Pattern:- This pattern is a method to minimize recreating the same items twice, and therefore minimize the memory impact in our systems. Browsers uses the flyweight pattern to save images in memory so they don't load twice. The flyweight pattern uses a similar approach to the singleton pattern.
+
+5. Decorator Pattern:- The decorator pattern is very similar to mixins, where we decorate code with classes or code that came from another area. The purpose of a decorator pattern, like a mixin, is to to take a class and extended it with other code. A good example is the is typescript decorator in their official website.
+
+6. Model View Controller(MVC):- This pattern defines how an application should obey separation of concern or be split, and often reflects how your modules are organized within three simple categories, models, views, and controllers. The model is where your data resides, where you define your schemas and the models for your data. The views is where you have your views, or in most cases, the pure HTML of your application, where the visuals reside. And finally, the controllers are where you have your logic of your application, where the functions that makes your application run reside.
+
+7. Model View Presenter pattern:- Is loosely based on MVC and almost the same. In an MVC pattern, we have our application organized in models, views, and controllers. Typically the organization will have views, pull data from controllers or models directly, and if there are any other logic or functions needed for the view, the controllers will supply them. In MVC, views have access to both the models and controllers. But in MVP pattern view doesn't have  access the model. The presenter serves as the logic, and supplier of data to view. The MVP pattern is seen in several frameworks, such as backbone, but it is quite popular in Android development.
+
+NB: MVC & MVP both offer similar approaches, but different architecture.
+
+8. Model View View Model:- - The MVVM pattern is similar to MVC & MVP but different only in implementation. It is also sometimes referred to as MVVC or model view view controller. The first view is your view which doesn't have any data or logic. It is simply a dumb component or component without any logic or data. Then you have the second view, model, which holds the logic in a state of the data, and this view model connects to a model. MVVM pattern is found in architecture application with react or angular.
+
+(3.) Behavioral Patterns:- these patterns are focused on improving communications between objects in a system. A good example of this is how we humans continuously add tools to better communicate in between each other. First we had the letter that was first delivered with horse carriers. Then it was improved with the telephone, followed by emails and chat etc. The Behavioral Patterns explored:
+1. Observer pattern, 2. , 3.  , 4.  , 5.  , 6.  , 7.  , 8.
+
+1. Observer pattern:- The Observer pattern is use to maintain a list of objects based on events, and is typically done with updating data based on these events. Basically  observer pattern is a way to publish information or objects or collections that we have access to, and then we can subscribe to it, or get that information from the observer, and then have access to all the information available for rooms or players or whatever is the data that you're working with.
+
+2. State Pattern:- It holds the information, or the data and properties that an application needs to render all the data, or even states of the application.Whenever it changes, it then updates a rendering of the application. State pattern is commonly used in React nad Angular framework. 
+
+3. Chain of Responsibility:- This is a pattern to help solve common practical issues of having a request from a client and needing this request to pass through multiple functions or logic to get the result.
+e.g So let's illustrate this with an example. When you click a Buy button in a e-commerce website, this particular request goes through a series of functions to finalize the order. So we click the Buy button, then the application needs to check if you're logged in, then needs to check if it has your address. If not, add an address or ask you to sign up. Then it needs to calculate the taxes/vat, shipping cost, process payment, and finally process the order, and display success message.
+e.g BUY -> Logged in? -> Address? -> Calculate taxes/vat -> Shipping Cost? -> Process Payment -> Display Success Message.
+
+4. Iterator Pattern:- - This is a pattern thatmuses a method of iterating through list of items, whereas the chain of responsibility will use more of a handler type and go through a chain. The iterator pattern is best used with a for loop and is perfect when you want to iterate through arays of objects. 
+
+5. Strategy Pattern:- This pattern is a way to encapsulate different algorithms or functions and then at runtime practically use the same code to run different scenarios.
+
+6. Momento Pattern:- This pattern is used to provide temporary state of an object and restoration of that object from a conversion into a different format. It is often used into serialization and deserialization of data. In this use case, an object is typically in a JavaScript object, where we need to transmit the data to some type of back-end, where we serialize this object into JSON for streaming it through HTTP protocols. Then, when this object hits the back-end server, or when we get a response back from the server through HTTP, we might need to deserialize the JSON object back into a JavaScript object for consumption into our application. Well, this is basically the memento pattern in action and they never loose their accuracy despite convertion into different format.
+
+7. Mediator Pattern:- The mediator pattern provides a set of objects which interact with each other, mostly by having a central authority dictating the terms in between objects
+
+8. Command Pattern:- The command pattern is one that encapsulates actions or operations as objects. In this pattern you abstract the actual function or execution of the action from the action itself. e.g Command pattern is often used in functional programming and Redux.
